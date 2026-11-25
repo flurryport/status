@@ -34,7 +34,7 @@ status-website:
   name: FlurryPORT status
   logoUrl: https://flurryport.io/site/assets/Logo.png
   introTitle: "**FlurryPORT** status"
-  introMessage: Checked every five minutes by GitHub, from outside our own servers. The full history is public in [this repository](https://github.com/flurryport/status).
+  introMessage: Checked on a schedule by GitHub, from outside our own servers. The full history is public in [this repository](https://github.com/flurryport/status).
   navbar:
     - title: Status
       href: /

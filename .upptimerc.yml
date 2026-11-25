@@ -1,31 +1,47 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# FlurryPORT status page. This file goes into the repository flurryport/status as
+# .upptimerc.yml (note the leading dot), replacing the template's sample content.
+# Options: https://upptime.js.org/docs/configuration
 
+owner: flurryport
+repo: status
+
+user-agent: flurryport
+
+# Each route is public, needs no sign-in and changes nothing. Together they touch
+# every service a customer depends on.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://flurryport.io
+    maxResponseTime: 5000
+  - name: Pipes and Locker API
+    url: https://api.flurryport.io/api/v1/locker/anchors
+    maxResponseTime: 5000
+  - name: Accounts and sign-in
+    url: https://api.flurryport.io/api/v1/terms/current
+    maxResponseTime: 5000
+  - name: Billing
+    url: https://api.flurryport.io/api/v1/billing/plans
+    maxResponseTime: 5000
+  - name: Recipes
+    url: https://flurryport.io/recipes
+    maxResponseTime: 5000
+  - name: Trial
+    url: https://flurryport.dev/try
+    maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.flurryport.io
+  name: FlurryPORT status
+  logoUrl: https://flurryport.io/site/assets/Logo.png
+  introTitle: "**FlurryPORT** status"
+  introMessage: Checked every five minutes by GitHub, from outside our own servers. The full history is public in [this repository](https://github.com/flurryport/status).
   navbar:
     - title: Status
       href: /
-    - title: GitHub
+    - title: FlurryPORT
+      href: https://flurryport.io
+    - title: History on GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# We write the repository description ourselves.
+skipDescriptionUpdate: true
